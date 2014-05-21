@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang=en>
+        <head>
+                <meta charset=utf-8>
+                <title>OpenWest 2014</title>
+                <meta name=author content=@brianleroux>
+                <meta name=apple-mobile-web-app-capable content=yes>
+                <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+                <link rel=stylesheet href=css/reveal.min.css>
+                <link rel=stylesheet href=css/theme/adobe/adobe.css id=theme>
+                <link rel=stylesheet href=lib/css/zenburn.css>
+                <script>
+        document.write('<link rel=stylesheet href=css/print/' + (window.location.search.match(/print-pdf/gi)?'pdf':'paper') + '.css type=text/css media=print>')
+        // presentor notes kludge for my iphone
+        window.location.search.substring(1).split('&').forEach(function(i) { 
+            if(i === 'notes=true') {
+                document.write('<link rel=stylesheet href=css/notes.css type=text/css media=screen>')
+            }
+        })
+        </script>
+                <!--[if lt IE 9]>
+                <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+        @font-face { font-family: "source"; src: url('font/SourceSansPro-ExtraLight.otf'); }
+        @font-face { font-family: "source-code"; src: url('font/SourceCodePro-Regular.otf'); }
+        /* yah I did - brianleroux */
+        .reveal h1, .reveal h2, .reveal h3,  .reveal h4, .reveal  {
+            line-height:100px;           
+            font-family:source;
+        }
+        .reveal a:not(.image)  {
+            color:rgb(46, 228, 0);
+        }
+        .reveal .progress span {
+            background:rgb(46, 228, 0);
+        }
+        .bg-white .reveal .state-background {
+            background:#fff;
+        }
+        .blues .reveal .state-background {
+            background:#00a4e4;
+        }
+        body:after {
+            content: url(logo.svg);
+            width: 74px;
+            height: 126px;
+            position: fixed;
+            top: 0px;
+            right: 2em;
+        }
+
+        </style>
+        </head>
+        <body>
+                <div id=banner>
+                </div>
+                <div class=reveal>
+                        <div class="slides">
+        <section data-state=bg-white>
+          <h2 style=margin-bottom:105px;color:#333;>State of the Mobile Web 2014</h2>
+          <h4 style=color:#ccc;>Joe Bowser</h4>
+        </section>
+        <section data-state=bg-white>
+            <h2 style=margin-bottom:105px;color:#333;>Apache Cordova: Past, Present, Future</h2>
+        </section>
+        <section>
+            What is Apache Cordova?
+        </section>
+        <section data-state=bg-white>
+            <h2 style=margin-bottom:105px;color:#333;>Apache Cordova</h2>
+            <h4 style=color:#ccc;>Build apps with HTML, CSS, and JavaScript.</h4>
+        </section>
+        <section>
+          <h2>PhoneGap</h2>
+        </section>
+        <section>
+          <h2>Cross-Platform Mobile Development</h2>
+        </section>
+        <section>
+          <h2>Access to Device APIs by plugin</h2>
+            <ul style=align:left;list-style:none;>
+              <li>Minimal set of supported APIs</li>
+              <li>Large set of community APIs</li>
+              <li>Can be found at <a href="http://plugins.cordova.io">plugins.cordova.io</a></li>
+            </ul>
+        </section>
+         <section data-state=bg-white>
+            <h2 style=color:#333>Helps put your app in the store! (No guarantees)</h2>
+            <img width=100 src=img/app-store.png style=border:none;box-shadow:none;>
+            <img width=100 src=img/play.jpeg style=border:none;box-shadow:none;>
+            <img width=100 src=img/bb.jpg style=border:none;box-shadow:none;>
+            <img width=100 src=img/marketplace.jpg style=border:none;box-shadow:none;>
+            <aside class=notes>
+                <ul>
+                    <li>Interestingly, most app stores are all hybrid apps themselves.</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section data-state=bg-white>
+        <h2>Who does Cordova dev?</h2>
+        <img width=100 src=img/adobe.jpg style=border:none;box-shadow:none;>
+        <img width=80 src=img/bblogo.jpg style=border:none;box-shadow:none;>
+        <img width=180 src=img/google.jpg style=border:none;box-shadow:none;>
+        <img width=250 src=img/msft.jpg style=border:none;box-shadow:none;><br>
+        <img width=140 src=img/ibm.jpg style=border:none;box-shadow:none;>
+        <img width=100 src=img/intel.jpg style=border:none;box-shadow:none;>
+        <img width=100 src=img/moz.jpeg style=border:none;box-shadow:none;>
+        <img width=100 src=img/lg.jpeg style=border:none;box-shadow:none;>
+        </section>
+        <section>
+            <h2>How to contribute?</h2>
+            <a href=http://wiki.apache.org/cordova/ContributorWorkflow>More on our wiki.</a>
+        </section>
+         <section>
+            <h2>The Story of Cordova...</h2>
+            <p style="font-style: italic">"The goal of PhoneGap is to cease to exist"</p>
+        </section>
+        <section>
+            <h3>2008 - Beer Nerds &lt;3 Mobile Web</h3>
+            <h4 style=color:#ccc;>iPhone SDK, Blackberry 4.2, &amp Android 1.0</h4>
+            <aside class=notes>
+            philsophy, rob/brock/joe/dave pivotal
+            </aside>
+        </section>
+        <section>
+            <h2>2009 - iOS was the priority</h2>
+            <h4 style="font-style: italic; color:#ccc;">Oh you do Android, why?!?</h4>
+            <aside class=notes>
+              oscon, oreilly disrupt, apple rejection
+            </aside>
+        </section>
+        <section>
+            <h2>2010 - Getting Contributors</h2>
+            <h4 style=color:#ccc;>Big Blue and PhoneGap/Build.</h4>
+        </section>
+        <section>
+            <h2>2011 - Growing Pain</h2>
+            <h4 style=color:#ccc;>1.0, Adobe, and Apache.</h4>
+        </section>
+        <section>
+            <h2>2012 - Cadence Realized</h2>
+            <h4 style=color:#ccc;>2.0, and 1 million downloads.</h4>
+            <aside class=notes>
+            cordova js, platform scripts, webview, windows phone
+            </aside>
+        </section>
+        <section>
+            <h2>2013 - Optionally Opinionated</h2>
+            <h4 style=color:#ccc;>3.0 w/ over 2 million downloads.</h4>
+            <aside class=notes>
+              cli install, unfied project structure, faster, plugins
+            </aside>
+        </section>
+        <section>
+            <h2>2014?</h2>
+            <h4 style=color:#ccc;>OMG CLIFFHANGER.</h4>
+        </section>
+
+       
+        <section data-state=bg-red>
+            <h3>Real talk.</h3>
+        </section>
+        <section data-state=bg-red>
+            <h3>Is it possible to quickly build a FAST app using HTML, CSS, and JavaScript?</h3>
+        </section>
+        <section data-state=bg-white>
+          <h2 style=margin-bottom:105px;color:#333;>Yes!</h2>
+        </section>
+        <section data-state=bg-red>
+            <h3>Is it possible to quickly build a FAST app using HTML, CSS, and JavaScript that has a consistent look and feel and works properly across devices?</h3>
+        </section>
+         <section data-state=bg-white>
+          <h2 style=margin-bottom:105px;color:#333;>Yes, but it takes work!</h2>
+        </section>
+         <section data-state=bg-red>
+            <h3>Android WebView</h3>
+            <p style="font-style: italic">"The IE6 of Mobile Development"</p>
+        </section>
+        <section>
+                <h2>Things outside our control:</h2>
+                <ul style=align:left;list-style:none;>
+                  <li>Rendering issues (Media queries)</li>
+                  <li>iFrame support breaking</li>
+                  <li>Support for Android Resources and Android Assets</li>
+                  <li>URI encoding bugs</li>
+                  <li>Browser History Bugs</li>
+                  <li>Text-Field Issues</li>
+                </ul>
+                <aside class=notes><ul></ul></aside>
+         </section>
+         <section>
+           <h2>Targeting Android</h2>
+           <img src="img/pie_chart.png">
+           <a href="http://developer.android.com/about/dashboards/index.html">http://developer.android.com/about/dashboards/index.html</a>
+        </section>
+         <section>
+                <h2>History of this issue:</h2>
+                <ul style=align:left;list-style:none;>
+                  <li>Six years of errors</li>
+                  <li>Weird Android bugs with various frameworks</li>
+                  <li>Performance issues on Android</li>
+                  <li>Bugs left as "Won't Fix" without any options for the user</li>
+                </ul>
+                <aside class=notes><ul></ul></aside>
+         </section>
+
+       <section data-state=bg-white>
+            <h2 style=margin-bottom:105px;color:#333;>Third Party WebView</h2>
+            <h4 style=color:#ccc;>Use third party webviews your apps.</h4>
+        </section>
+        <section>
+            <h2>Installable via a plugin</h2>
+            <h4 style=color:#ccc;>plugman install crosswalk</h4>
+        </section>
+        <section>
+            <h2>DEMO TIME - WebGL</h2>
+        </section>
+        <section>
+            <h2>DEMO TIME - Chrome Debugging</h2>
+        </section>
+        <section>
+            <h2>Real Talk</h2>
+                <ul style=align:left;list-style:none;>
+                  <li>Makes the app a lot bigger</li>
+                  <li>Instead of Android WebView bugs, you have third-party bugs</li>
+                  <li>Third-Party WebView may not start as fast as Android WebView</li>
+                  <li>This is solving minor problems with a sledgehammer</li>
+                </ul>
+        </section>
+        <section>
+            <h2>Having a sledgehammer is better than having no tool at all</h2>
+        </section>
+         <section>
+                <h2>Availability:</h2>
+                <ul style=align:left;list-style:none;>
+                  <li>Currently lives on a dev branch of Cordova</li>
+                  <li>Currently only has Crosswalk as a third-party webview</li>
+                  <li>Hope to have Mozilla GeckoView soon</li>
+                  <li>Support for WebViews will land in Cordova 4.0</li>
+                </ul>
+                <aside class=notes><ul></ul></aside>
+         </section>
+               <section data-state=soothe>
+                <h2>To summarize</h2>
+                <ul style=align:left;list-style:none;>
+                  <li>In 2014, the Web still isn't a first class platform on mobile</li>
+                  <li>Apache Cordova can make web apps first class citizens</li>
+                  <li>More tools are existing for hybrid apps</li>
+                  <li>Third Party Webviews are going to be awesome</li>
+                </ul>
+                <aside class=notes><ul></ul></aside>
+                </section>
+
+                <section>
+                    <h2>Thank You</h2>
+                <ul style=align:left;list-style:none;>
+                  <li><a href="http://cordova.apache.org">http://cordova.apache.org</a></li>
+                  <li><a href="http://phonegap.com">http://phonegap.com</a></li>
+                </ul>
+
+                </section>
+                
+
+
+
+<!--
+<section data-state="blackout">
+<section>
+<h2>"soothe"</h2>
+</section>
+                                <section>
+                                        <h2>Pretty Code</h2>
+                                        <pre><code contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+                                        </code></pre>
+                                        <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+                                </section>
+
+
+                                        <section>
+                                                <h2>Fragmented Views</h2>
+                                                <p>Hit the next arrow...</p>
+                                                <p class="fragment">... to step through ...</p>
+                                                <ol>
+                                                        <li class="fragment"><code>any type</code></li>
+                                                        <li class="fragment"><em>of view</em></li>
+                                                        <li class="fragment"><strong>fragments</strong></li>
+                                                </ol>
+
+                                                <aside class="notes">
+                                                        This slide has fragments which are also stepped through in the notes window.
+                                                </aside>
+                                        </section>
+                                        <section>
+                                                <h2>Fragment Styles</h2>
+                                                <p>There's a few styles of fragments, like:</p>
+                                                <p class="fragment grow">grow</p>
+                                                <p class="fragment shrink">shrink</p>
+                                                <p class="fragment roll-in">roll-in</p>
+                                                <p class="fragment fade-out">fade-out</p>
+                                                <p class="fragment highlight-red">highlight-red</p>
+                                                <p class="fragment highlight-green">highlight-green</p>
+                                                <p class="fragment highlight-blue">highlight-blue</p>
+                                        </section>
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                </div>
+                <script src="lib/js/head.min.js"></script>
+                <script src="js/reveal.min.js"></script>
+                <script>
+
+                        // Full list of configuration options available here:
+                        // https://github.com/hakimel/reveal.js#configuration
+                        Reveal.initialize({
+                                controls: false,
+                                progress: true,
+                                history: true,
+                                center: true,
+
+                                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                                transition: 'linear', // default/cube/page/concave/zoom/linear/none
+
+                                // Optional libraries used to extend on reveal.js
+                                dependencies: [
+                                        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+                                        // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                                ]
+                        })
+                </script>
+        </body>
+</html>
